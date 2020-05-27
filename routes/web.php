@@ -30,4 +30,8 @@ Route::get('/Perfil', function () {
 Route::get('/Contato', function () {
     return view('Contato');
 });
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('login/google', 'Auth\LoginController@redirectToProvider');
+Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback');
 
